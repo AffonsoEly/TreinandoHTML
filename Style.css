@@ -3,3 +3,13 @@
     padding: 0; /* Reset de margens */
     box-sizing: border-box; /* faz com que padding e border não aumentem a largura total dos elementos*/
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body {
+    font-family: sans-serif;
+}
