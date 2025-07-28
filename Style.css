@@ -4,12 +4,24 @@
     box-sizing: border-box; /* faz com que padding e border não aumentem a largura total dos elementos*/
 }
 
-.navbar {
+.navbar-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
 }
 
 .body {
     font-family: sans-serif;
+}
+
+.a {
+    align-content: baseline;
+}
+.img {
+    width: 200px;
+    height: 200px;
+
 }
