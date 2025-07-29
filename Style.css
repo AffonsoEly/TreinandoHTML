@@ -1,63 +1,155 @@
-* {/* O Asterisco é para ajustes globais */
-    margin: 0; /* Reset de margens */
-    padding: 0; /* Reset de margens */
-    box-sizing: border-box; /* faz com que padding e border não aumentem a largura total dos elementos*/
+/* =============================================
+   RESET BÁSICO - Padroniza estilos iniciais
+   ============================================= */
+   * {
+    margin: 0;          /* Remove margens padrão de todos elementos */
+    padding: 0;         /* Remove paddings padrão de todos elementos */
+    box-sizing: border-box; /* Faz padding e border ficarem dentro da largura definida */
+    font-family: Arial, sans-serif; /* Define fonte padrão para toda a página */
 }
 
+/* =============================================
+   NAVBAR - Barra de navegação superior
+   ============================================= */
 .navbar {
-    display: flex;                /* Ativa o flexbox */
-    align-items: center;          /* Centraliza verticalmente */
+    display: flex;              /* Ativa layout flexbox */
     justify-content: space-between; /* Espaço entre logo e links */
-    padding: 1rem 2rem;          /* Espaçamento interno */
-    background-color: #333;       /* Cor de fundo */
-  }
-
-  .logo img {
-    height: 200px;                /* Altura da logo */
-    width: 200px;                 /* Largura proporcional */
-  }
-
-  .navbar-links {
-    display: flex;               /* Flexbox para os links */
-    list-style: none;            /* Remove marcadores */
-    margin: 0;                   /* Remove margens padrão */
-    padding: 0;                  /* Remove paddings padrão */
-    gap: 1.5rem;                 /* Espaço entre links */
-  }
-
-  .nav-links a {
-    color: white;                /* Cor do texto */
-    text-decoration: none;       /* Remove sublinhado */
-    padding: 0.5rem 0;           /* Espaçamento vertical */
-    transition: color 0.3s ease; /* Efeito hover suave */
-  }
-
-  .nav-links a:hover {
-    color: #f0f0f0;              /* Cor ao passar mouse */
-    border-bottom: 2px solid #fff; /* Opcional: linha inferior */
-  }
-
-.body {
-    font-family: sans-serif;
+    align-items: center;        /* Centraliza verticalmente os itens */
+    background-color: #333;     /* Cor de fundo escura */
+    padding: 1rem 2rem;         /* Espaçamento interno: 1rem topo/baixo, 2rem laterais */
+    color: white;               /* Cor do texto */
 }
 
-.a {
-    align-content: baseline;
-}
-.container {
-    display: flex;
-    min-height: 100vh; /* altura total da viewport*/
+/* Logo da navbar */
+.logo {
+    height: 50px;       /* Altura fixa para a logo */
+    width: auto;        /* Largura proporcional para manter aspecto */
 }
 
+/* Container dos links de navegação */
+.nav-links {
+    display: flex;      /* Disposição em linha dos links */
+    list-style: none;   /* Remove marcadores de lista */
+    gap: 1.5rem;        /* Espaço entre os itens de navegação */
+}
+
+/* Estilo dos links */
+.nav-links a {
+    color: white;               /* Cor do texto */
+    text-decoration: none;      /* Remove sublinhado */
+    padding: 0.5rem;            /* Espaçamento interno */
+    transition: all 0.3s ease;  /* Efeito suave em hover */
+}
+
+/* Efeito ao passar o mouse */
+.nav-links a:hover {
+    background-color: #555;     /* Fundo mais claro */
+    border-radius: 4px;         /* Bordas arredondadas */
+}
+
+/* =============================================
+   CORPO - Seção principal do conteúdo
+   ============================================= */
+
+/* Container das duas colunas */
+.two-columns {
+    display: flex;      /* Layout flexbox para colunas */
+    padding: 2rem;      /* Espaçamento interno */
+    gap: 2rem;          /* Espaço entre colunas */
+}
+
+/* Estilo de cada coluna */
 .column {
-    padding: 20px;
-    flex: 1; /*Ambas as colunas crescem igualmente*/
+    flex: 1;                    /* Cresce igualmente para dividir espaço */
+    padding: 1rem;              /* Espaçamento interno */
+    border: 1px solid #ddd;     /* Borda sutil */
+    border-radius: 5px;         /* Cantos arredondados */
 }
 
-.left-column {
-    background-color: #f0f0f0;
+/* Título das colunas */
+.column h2 {
+    margin-bottom: 1rem;    /* Espaço abaixo do título */
+    color: #333;            /* Cor do texto escuro */
 }
 
-.right-column {
-    background-color: #e0e0e0;
+/* Container das três colunas (cards) */
+.three-columns {
+    display: flex;          /* Layout flexbox */
+    padding: 0 2rem 2rem;   /* Espaçamento: 0 topo, 2rem laterais, 2rem baixo */
+    gap: 2rem;              /* Espaço entre cards */
+}
+
+/* Estilo dos cards */
+.card {
+    flex: 1;                    /* Distribui espaço igualmente */
+    text-align: center;         /* Alinha conteúdo ao centro */
+    border: 1px solid #ddd;     /* Borda sutil */
+    border-radius: 5px;         /* Cantos arredondados */
+    padding: 1rem;              /* Espaçamento interno */
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+/* Efeito hover nos cards */
+.card:hover {
+    transform: translateY(-5px);        /* Levanta card levemente */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* Imagens dentro dos cards */
+.card img {
+    width: 100%;            /* Largura total do container */
+    height: 150px;          /* Altura fixa */
+    object-fit: cover;      /* Redimensiona imagem mantendo proporção */
+    border-radius: 5px;     /* Cantos arredondados */
+    margin-bottom: 1rem;    /* Espaço abaixo da imagem */
+}
+
+/* =============================================
+   FOOTER - Rodapé da página
+   ============================================= */
+footer {
+    display: flex;                      /* Layout flexbox */
+    justify-content: space-between;     /* Espaço entre logo e texto */
+    align-items: center;               /* Centraliza verticalmente */
+    background-color: #333;            /* Cor de fundo escura */
+    color: white;                      /* Cor do texto */
+    padding: 1.5rem 2rem;              /* Espaçamento interno */
+}
+
+/* Logo no footer */
+.footer-logo {
+    height: 40px;       /* Altura menor que a logo principal */
+    width: auto;        /* Largura proporcional */
+}
+
+/* Texto do footer */
+.footer-text {
+    text-align: right;  /* Alinha texto à direita */
+}
+
+/* =============================================
+   RESPONSIVIDADE - Ajustes para mobile
+   ============================================= */
+@media (max-width: 768px) {
+    /* Colunas viram linhas em mobile */
+    .two-columns, .three-columns {
+        flex-direction: column; /* Empilha verticalmente */
+    }
+    
+    /* Links de navegação */
+    .nav-links {
+        flex-wrap: wrap;         /* Quebra linha se necessário */
+        justify-content: center; /* Centraliza links */
+    }
+    
+    /* Footer empilhado */
+    footer {
+        flex-direction: column;  /* Empilha logo e texto */
+        gap: 1rem;               /* Espaço entre elementos */
+    }
+    
+    /* Texto centralizado */
+    .footer-text {
+        text-align: center;      /* Alinha texto ao centro */
+    }
 }
