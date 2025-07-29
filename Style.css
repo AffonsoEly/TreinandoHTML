@@ -4,14 +4,38 @@
     box-sizing: border-box; /* faz com que padding e border não aumentem a largura total dos elementos*/
 }
 
-.navbar-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 1rem 2rem;
-}
+.navbar {
+    display: flex;                /* Ativa o flexbox */
+    align-items: center;          /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaço entre logo e links */
+    padding: 1rem 2rem;          /* Espaçamento interno */
+    background-color: #333;       /* Cor de fundo */
+  }
+
+  .logo img {
+    height: 200px;                /* Altura da logo */
+    width: 200px;                 /* Largura proporcional */
+  }
+
+  .navbar-links {
+    display: flex;               /* Flexbox para os links */
+    list-style: none;            /* Remove marcadores */
+    margin: 0;                   /* Remove margens padrão */
+    padding: 0;                  /* Remove paddings padrão */
+    gap: 1.5rem;                 /* Espaço entre links */
+  }
+
+  .nav-links a {
+    color: white;                /* Cor do texto */
+    text-decoration: none;       /* Remove sublinhado */
+    padding: 0.5rem 0;           /* Espaçamento vertical */
+    transition: color 0.3s ease; /* Efeito hover suave */
+  }
+
+  .nav-links a:hover {
+    color: #f0f0f0;              /* Cor ao passar mouse */
+    border-bottom: 2px solid #fff; /* Opcional: linha inferior */
+  }
 
 .body {
     font-family: sans-serif;
@@ -20,8 +44,20 @@
 .a {
     align-content: baseline;
 }
-.img {
-    width: 200px;
-    height: 200px;
+.container {
+    display: flex;
+    min-height: 100vh; /* altura total da viewport*/
+}
 
+.column {
+    padding: 20px;
+    flex: 1; /*Ambas as colunas crescem igualmente*/
+}
+
+.left-column {
+    background-color: #f0f0f0;
+}
+
+.right-column {
+    background-color: #e0e0e0;
 }

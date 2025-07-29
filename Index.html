@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="Style.css">
     <title>Treinando HTML</title>
 </head>
-<body>
+<body class="body">
     <header>
     
         <nav class="navbar"> 
             <div class="navbar-brand">
-                <a class="a" href="#"> <img class="img" src="Imagens/img.png" alt="logo"></a> 
+                <a class="nav-links a" href="#"> <img class="logo img" src="Imagens/img.png" alt="logo"></a> 
             </div>
             <ul class="navbar-links">
                 <li><a href="#">Home</a></li>
@@ -23,12 +23,19 @@
         </nav>
     
     </header>
-    <div>
-        <form>
-            <p>Olá Mundo</p>
-        </form>
-
+    <div class="container">
+        <div class="column left-column"></div>
+        <!--Conteudo da colunas esquerda-->
+        <h2>Coluna Esquerda</h2>
+        <p>Conteúdo aqui...</p>
     </div>
+    
+    <div class="column right-column">  
+        <!--Conteudo da coluna direita-->
+        <h2>Coluna Direita</h2>
+        <p>Conteudo aqui...</p>
+    </div>
+    
 
     <script src="script.js"></script>
 </body>
